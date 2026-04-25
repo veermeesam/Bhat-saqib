@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+
+body {
+    background: linear-gradient(135deg, #ffb6d9, #ffffff);
+    overflow-x: hidden;
+}
+
+/* HERO LANDSCAPE */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #ff66b2, #ffb6d9);
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* FOUNDER */
+.founder {
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+}
+
+.founder-box {
+    display: flex;
+    gap: 30px;
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.founder img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* PRODUCTS GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 40px;
+    padding: 60px;
+}
+
+.card {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    padding: 50px;
+    background: #ffe6f2;
+}
+
+/* FOOTER */
+footer {
+    background: #ff66b2;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 60px;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+    .products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 400px;
+    }
+}
